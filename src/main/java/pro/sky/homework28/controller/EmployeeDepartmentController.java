@@ -5,12 +5,10 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 import pro.sky.homework28.entity.Employee;
-import pro.sky.homework28.service.EmployeeDepartmentService;
 import pro.sky.homework28.service.EmployeeDepartmentServiceImpl;
 
 import java.util.List;
 import java.util.Map;
-import java.util.TreeSet;
 
 @RestController
 @RequestMapping("/departments")
@@ -38,6 +36,10 @@ public class EmployeeDepartmentController {
     @GetMapping("/index")
     public List<Employee> departmentIndexSalary(@RequestParam int indexSalary, @RequestParam int departmentId){
         return departmentService.departmentIndexSalary(indexSalary,departmentId);
+    }
+    @GetMapping("/sum")
+    public String departmentIndexSalary(@RequestParam int departmentId){
+        return "Сумма зарплат в " + departmentId + " отделе " + departmentService.sumDepartmentSalary(departmentId);
     }
 
     }

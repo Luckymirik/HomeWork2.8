@@ -49,5 +49,27 @@ public class EmployeeDepartmentServiceImpl implements EmployeeDepartmentService 
                 .peek((employee) -> employee.setSalary((employee.getSalary() + employee.getSalary() * indexSalary / 100)))
                 .collect(Collectors.toList());
     }
+    @Override
+    public Integer sumDepartmentSalary(int department){
+        return employeeService.findAll().stream()
+                .filter(employee -> employee.getDepartment()==department)
+                .map(employee -> employee.getSalary())
+                .reduce((s1, s2) -> s1 + s2)
+                .orElse(null);
 
+    }
+
+    public int sumDepartmentSalaryTwo(int department){
+        return employeeService.findAll().stream()
+                .mapToInt(Employee::getSalary)
+                .sum();
+
+    }
+    public double averageDepartmentSalary(int department){
+        return employeeService.findAll().stream()
+                .filter(employee -> employee.getDepartment()==department)
+                .mapToInt(Employee::getSalary)
+                .average()
+                .orElse(0);
+    }
 }

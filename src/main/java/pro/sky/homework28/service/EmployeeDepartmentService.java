@@ -16,4 +16,6 @@ public interface EmployeeDepartmentService {
     Map<Integer, List<Employee>> getAllDepartment();
 
     List<Employee> departmentIndexSalary(int indexSalary, int department);
+
+    Integer sumDepartmentSalary(int department);
 }
