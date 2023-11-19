@@ -1,4 +1,11 @@
 # HomeWork2.8
+Stream API и Optional
+Step 1. Add the employee's "Salary" and "Department" fields from the coursework to the field.
+Step 2. In the present Spring project, the methods of working with coursework departments are transferred.
+Step 3. Replace the loop implementation with the Stream API. Write a new controller and service that will:
+1. Returns an employee with a high salary based on the department number that comes into the request from the browser.
+2. Returns the employee with the minimum salary based on the department number.
+3. Return of all department employees.
 Educational project. Libraries
 
 The goal of today's homework is to learn how to connect libraries to projects.
