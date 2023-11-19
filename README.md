@@ -6,6 +6,8 @@ Step 3. Replace the loop implementation with the Stream API. Write a new control
 1. Returns an employee with a high salary based on the department number that comes into the request from the browser.
 2. Returns the employee with the minimum salary based on the department number.
 3. Return of all department employees.
+
+
 Educational project. Libraries
 
 The goal of today's homework is to learn how to connect libraries to projects.
